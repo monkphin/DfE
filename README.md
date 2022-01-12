@@ -1,2 +1,2 @@
 # DfE
-A repository for DfE cohort DevOps learning.
+A **repository** for DfE cohort DevOps learning.
