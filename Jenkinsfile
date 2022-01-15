@@ -1,6 +1,6 @@
 pipeline {
-  againt { docker {image 'python:3' }}
-  stage {
+  agent { docker {image 'python:3' }}
+  stages {
     tage (build) {
       steps {
         sh 'python --version'
