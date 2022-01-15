@@ -1,9 +1,19 @@
 pipeline {
-    agent { docker { image 'python:3' } }
+    agent any
     stages {
         stage('build') {
             steps {
-                sh 'python --version'
+                echo 'Build stage is being executed'
+            }
+        }
+        stage('test') {
+            steps {
+                echo 'Test stage is being executed'
+            }
+        }
+        stage('deploy') {
+            steps{
+                echo 'Deploy stage is being executed'
             }
         }
     }
