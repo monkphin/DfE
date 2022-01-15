@@ -1,4 +1,4 @@
-pipleline {
+pipeline {
   againt { docker {image 'python:3' }}
   stage {
     tage (build) {
