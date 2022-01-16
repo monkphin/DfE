@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                echo 'Build stage is being executed'
+                sh 'docker-compose ps'
             }
         }
         stage('test') {
