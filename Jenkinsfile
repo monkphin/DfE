@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'docker-compose ps'
+                sh 'docker ps'
             }
         }
         stage('test') {
