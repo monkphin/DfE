@@ -6,6 +6,7 @@ pipeline {
         steps{
             sh 'pwd'
             sh 'ls -al'
+            sh cp * -r ~/Documents/MultiBranchPipeline-Job
         }}
 
         stage ('test'){
@@ -18,6 +19,10 @@ pipeline {
             echo 'Deployment stage executed.'
         }}
 
+        stage ('Post Check'){
+        steps{
+            echo 'Post Checks stage executed.'
+        }}
 
     }
 }
