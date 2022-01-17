@@ -4,7 +4,8 @@ pipeline {
     stages {
         stage ('build'){
         steps{
-            echo 'Build stage executed.'
+            sh 'pwd'
+            sh 'ls -al'
         }}
 
         stage ('test'){
