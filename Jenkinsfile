@@ -13,13 +13,8 @@ pipeline {
         steps{
             echo 'Test stage executed.'
             echo 'microservices stopped'
-            sh 'telnet localhost:1001'
-            sh 'get'
-            echo 'PMA is up'
-            sh 'telne localhost:5000'
-            sh 'get'
-            echo 'FLASK is up'
             sh 'docker-compose down'
+            sh 'docker rm $(docker ps -aq)'
         }}
 
         stage ('Deploy'){
