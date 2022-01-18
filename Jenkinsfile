@@ -13,7 +13,7 @@ pipeline {
         steps{
             echo 'Test stage executed.'
             echo 'microservices stopped'
-            sh 'docker-compose down'
+            sh 'docker-compose -f /var/lib/jenkins/workspace/MultiBranchPipeline-Job_main/webapp/docker-compose.yml down'
             sh 'docker rm $(docker ps -aq)'
         }}
 
