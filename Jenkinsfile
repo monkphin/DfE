@@ -6,7 +6,7 @@ pipeline {
         steps{
             sh 'pwd'
             sh 'ls -al'
-            sh cp -r /var/lib/jenkins/workspace/MultiBranchPipeline-Job_main /home/darren/Documents/MultiBranchPipeline-Job
+            sh 'cp -r /var/lib/jenkins/workspace/MultiBranchPipeline-Job_main /home/darren/Documents/MultiBranchPipeline-Job'
         }}
 
         stage ('test'){
