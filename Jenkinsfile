@@ -4,12 +4,22 @@ pipeline {
     stages {
         stage ('build'){
         steps{
+            echo 'Build stage executed.' 
             sh 'docker-compose -f /var/lib/jenkins/workspace/MultiBranchPipeline-Job_main/webapp/docker-compose.yml up --build -d'
+
         }}
 
         stage ('test'){
         steps{
             echo 'Test stage executed.'
+            echo 'microservices stopped'
+            sh 'telnet localhost:1001'
+            sh 'get'
+            echo 'PMA is up'
+            sh 'telne localhost:5000'
+            sh 'get'
+            echo 'FLASK is up'
+            sh 'docker-compose down'
         }}
 
         stage ('Deploy'){
